@@ -49,7 +49,7 @@ export class UsersController {
 
             return response.status(200).json({ ...user, token })
         }catch(error){
-            return response.status(500).json({ message: 'Houve algum erro. Tente novamente mais tarde.'})
+            return response.status(500).json({ message: 'There was an error. Try again later.'})
         }
     }
 }

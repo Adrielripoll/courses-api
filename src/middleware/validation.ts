@@ -14,15 +14,15 @@ export const ValidationMiddleware = (Schema: ObjectSchema) => {
 }
 
 const messages: LanguageMessages = {
-    'any.required':'{{#label}} é um campo obrigatório',
-    'string.empty': '{{#label}} não pode ser um campo vazio',
-    'string.pattern.base': 'Senha deve conter somente letras e números e ter entre 8 e 30 caracteres',
-    'string.alphanum': '{{#label}} deve conter caracteres alfa-numéricos',
-    'string.base': '{{#label}} deve ser uma string',
-    'string.email': '{{#label}} deve ser válido',
-    'string.length': '{{#label}} deve ter exatamente {{#limit}} caracteres',
-    'string.max': '{{#label}} deve ter no máximo {{#limit}} caracteres',
-    'string.min': '{{#label}} deve ter pelo menos {{#limit}} caracteres',
+    'any.required':'{{#label}} is required',
+    'string.empty': '{{#label}} is not allowed to be empty',
+    'string.pattern.base': 'Passowrd must contain only alpha-numeric and must be between 8 and 30 characters',
+    'string.alphanum': '{{#label}} must only contain alpha-numeric characters',
+    'string.base': '{{#label}} must be a string',
+    'string.email': '{{#label}} must be a valid email',
+    'string.length': '{{#label}} length must be {{#limit}} characters long',
+    'string.max': '{{#label}} length must be less than or equal to {{#limit}} characters long',
+    'string.min': '{{#label}} length must be at least {{#limit}} characters long',
 }
 
 export const userSchema = Joi.object({
