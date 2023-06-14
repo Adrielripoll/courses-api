@@ -22,7 +22,7 @@ describe('User', () => {
             expectTypeOf(response.body).toMatchTypeOf<User>()
         })
     
-        it('should return 400 when user already exists', async () => {
+        it('should return 409 when user already exists', async () => {
             UsersRepository.create(userPayload)
             
             const response = await request(app).post('/register').send(userPayload)
