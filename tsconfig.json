@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "resolveJsonModule": true,
     "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "module": "commonjs",                                /* Specify what module code is generated. */
     "rootDir": "./src",                                  /* Specify the root folder within your source files. */
@@ -9,5 +10,9 @@
     "strict": true,                                      /* Enable all strict type-checking options. */
     "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+  },
+  "exclude": [
+    "jest.config.ts",
+    "test/*"
+  ]
 }
