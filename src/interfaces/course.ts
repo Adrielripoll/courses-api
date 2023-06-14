@@ -1,11 +1,12 @@
 import { UUID } from 'crypto'
 
-export interface Curso {
+export interface Course {
 	id: UUID
-	titulo: string
-	descricao: string
-	instrutor: string
-	categoria: Categoria
+	title: string
+	description: string
+	instructor: string
+	price: number
+	category: Category
 }
 
-export type Categoria = "Programação" | "Design" | "Negócios"
+export type Category = "Programming" | "Design" | "Business"
