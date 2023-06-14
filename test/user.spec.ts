@@ -27,7 +27,7 @@ describe('User', () => {
             
             const response = await request(app).post('/register').send(userPayload)
     
-            expect(response.status).toBe(400)
+            expect(response.status).toBe(409)
             expect(response.body).toHaveProperty('message')
             expect(response.body.message).toBe('User already exists')
         })
