@@ -34,9 +34,9 @@ export class UsersController {
             return response.status(400).json({ message: 'Invalid credentials' })
         }
 
-        const compare = await bcrypt.compare(password, user.password)
+        const passwordsCompare: boolean = await bcrypt.compare(password, user.password)
         
-        if(!compare) {
+        if(!passwordsCompare) {
             return response.status(400).json({ message: 'Invalid credentials' })
         }
 
