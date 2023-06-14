@@ -81,7 +81,7 @@ describe('User', () => {
             
             expect(response.status).toBe(400)
             expect(response.body).toHaveProperty('message')
-            expect(typeof response.body.message).toBe('string')
+            expect(response.body.message).toBe("Invalid credentials")
         })
     })
 })
